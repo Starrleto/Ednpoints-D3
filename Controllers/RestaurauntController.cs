@@ -18,20 +18,11 @@ namespace RasuliEEndpointsD3.Controllers
             _restaurauntService = i;
         }
         [HttpGet]
-        [Route("AsianCategory")]
-        public string asian(){
-            return _restaurauntService.asianFood();
+        [Route("FindRestauraunt/{type}")]
+        public string find(string type){
+            return _restaurauntService.getRestauraunt(type);
         }
-        [HttpGet]
-        [Route("MexicanCategory")]
-        public string mexican(){
-            return _restaurauntService.mexicanFood();
-        }
-        [HttpGet]
-        [Route("AmericanCategory")]
-        public string american(){
-            return _restaurauntService.americanFood();
-        }
+
 
     }
 }

@@ -13,6 +13,9 @@ namespace RasuliEEndpointsD3.Services.Guessing
             Random ran = new Random();
             int num = ran.Next(1, 11);
             if(int.TryParse(guess, out numGuess)){
+                if(numGuess < 1 || numGuess > 10)
+                    return "Please enter a number only between 1-10.";
+
                 if(numGuess > num)
                     return "Lower";
                 else if (numGuess < num)
@@ -28,6 +31,9 @@ namespace RasuliEEndpointsD3.Services.Guessing
             Random ran = new Random();
             int num = ran.Next(1, 51);
             if(int.TryParse(guess, out numGuess)){
+                if(numGuess < 1 || numGuess > 50)
+                    return "Please enter a number only between 1-50.";
+
                 if(numGuess > num)
                     return "Lower";
                 else if (numGuess < num)
@@ -43,6 +49,9 @@ namespace RasuliEEndpointsD3.Services.Guessing
             Random ran = new Random();
             int num = ran.Next(1, 101);
             if(int.TryParse(guess, out numGuess)){
+                if(numGuess < 1 || numGuess > 100)
+                    return "Please enter a number only between 1-100.";
+
                 if(numGuess > num)
                     return "Lower";
                 else if (numGuess < num)

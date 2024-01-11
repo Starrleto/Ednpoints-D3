@@ -13,6 +13,14 @@ namespace RasuliEEndpointsD3.Services.Restauraunt
 
         string[] american = new string[]{"Chili's", "KFC", "AJ's Cafe and Grill", "Huckleberry's", "Black Bear Diner", "Center Street Grill", "McDonalds", "Wendy's", "My Garden Cafe", "Table 26"};
 
+        public string getRestauraunt(string name){
+            switch(name.ToLower()){
+                case "asian": return asianFood(); 
+                case "mexican": return mexicanFood(); 
+                case "american": return americanFood();
+                default: return "Please enter asian, mexican, or american";
+            }
+        }
         public string asianFood(){
             Random r = new Random();
             return asian[r.Next(0, asian.Length)];
