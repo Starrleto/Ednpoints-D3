@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RasuliEEndpointsD3.props" />
+</Project>
