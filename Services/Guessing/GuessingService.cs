@@ -11,7 +11,7 @@ namespace RasuliEEndpointsD3.Services.Guessing
         public string playEasy(string guess){
             int numGuess;
             Random ran = new Random();
-            int num = ran.Next(0, 11);
+            int num = ran.Next(1, 11);
             if(int.TryParse(guess, out numGuess)){
                 if(numGuess > num)
                     return "Lower";
@@ -21,12 +21,12 @@ namespace RasuliEEndpointsD3.Services.Guessing
                     return "You guessed it";
             }
             else
-                return "Please enter an integer";
+                return "Please enter an integer between 1-10";
         }
         public string playMed(string guess){
             int numGuess;
             Random ran = new Random();
-            int num = ran.Next(0, 51);
+            int num = ran.Next(1, 51);
             if(int.TryParse(guess, out numGuess)){
                 if(numGuess > num)
                     return "Lower";
@@ -36,12 +36,12 @@ namespace RasuliEEndpointsD3.Services.Guessing
                     return "You guessed it";
             }
             else
-                return "Please enter an integer";
+                return "Please enter an integer between 1-50";
         }
         public string playHard(string guess){
             int numGuess;
             Random ran = new Random();
-            int num = ran.Next(0, 101);
+            int num = ran.Next(1, 101);
             if(int.TryParse(guess, out numGuess)){
                 if(numGuess > num)
                     return "Lower";
@@ -51,7 +51,7 @@ namespace RasuliEEndpointsD3.Services.Guessing
                     return "You guessed it";
             }
             else
-                return "Please enter an integer";
+                return "Please enter an integer between 1-100";
         }
     }
 }
